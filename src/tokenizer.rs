@@ -2,7 +2,7 @@
 pub enum SExpr {
     SSym(String),
     SNum(u32),
-    SList(Vec<Sexpr>)
+    SList(Vec<SExpr>)
 }
 
 #[derive(Debug)]
