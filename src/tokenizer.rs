@@ -1,17 +1,5 @@
-#[derive(Debug)]
-pub enum SExpr {
-    SSym(String),
-    SNum(u32),
-    SList(Vec<SExpr>)
-}
-
-#[derive(Debug)]
-pub enum Token {
-    BracketOpen,
-    BracketClose,
-    Number(u32),
-    Symbol(String)
-}
+use expression::SExpr;
+use expression::Token;
 
 pub fn parse_string(input: &String) -> SExpr {
     return tokens_to_expression_tree(string_to_tokens(input));
